@@ -1,17 +1,15 @@
-plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.application'
 
 android {
     namespace 'com.abdulrahmandhafir.smartphones'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.abdulrahmandhafir.smartphones"
+        applicationId 'com.abdulrahmandhafir.smartphones'
         minSdk 24
         targetSdk 34
         versionCode 1
-        versionName "1.0.0"
+        versionName '1.0.0'
     }
 
     buildTypes {
@@ -19,6 +17,7 @@ android {
             minifyEnabled false
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
