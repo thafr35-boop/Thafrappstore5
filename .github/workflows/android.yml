@@ -19,16 +19,15 @@ jobs:
           java-version: '17'
           distribution: temurin
 
+      - name: إعداد Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: 'platforms;android-34 build-tools;34.0.0'
+
       - name: تثبيت Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.5'
-
-      - name: إعداد Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: تثبيت Android SDK 34
-        run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
       - name: بناء APK
         run: gradle assembleDebug --no-daemon
